@@ -72,12 +72,12 @@
                         </div>
 
                         <div class="text-center pt-1 mb-5 pb-1">
-                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Register</button>
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Registrar</button>
                         </div>
 
                         <div class="d-flex align-items-center justify-content-center pb-4">
-                            <p class="mb-0 me-2">Already have an account?</p>
-                            <a href="{{ route('login') }}" class="btn btn-outline-danger">Log in</a>
+                            <p class="mb-0 me-2">¿Ya tenes una cuenta?</p>
+                            <a href="{{ route('login') }}" class="btn btn-outline-danger">Inicia sesión</a>
                         </div>
                     </form>
 

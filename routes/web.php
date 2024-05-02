@@ -14,7 +14,7 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
  // Register
@@ -25,7 +25,7 @@ Route::post('register', [AuthController::class, 'registation'])->name('register.
 // Login
 //Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::post('login', [AuthController::class, 'accses'])->name('login.accses');
+Route::post('login', [AuthController::class, 'access'])->name('login.access');
 
 // Dashboard
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
@@ -36,3 +36,5 @@ Route::match(["get","post"],'profile', [AuthController::class, 'profile'])->name
 // Logout
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('forg_pass', [AuthController::class, 'forg_pass'])->name('forg_pass');
+Route::post('forg_pass', [AuthController::class, 'forg_pass'])->name('forg_pass');
