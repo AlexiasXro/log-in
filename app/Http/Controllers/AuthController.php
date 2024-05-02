@@ -31,7 +31,7 @@ class AuthController extends Controller
      //forgotten password
      public function forg_pass(){
         // GET + Post
-        return view("auth.forgotten_pass");
+        return view("auth.forg_pass");
     }
     
 
