@@ -22,6 +22,11 @@ class AuthController extends Controller
         return view("auth.login");
     }
     
+    public function profile(){
+        // GET + Post
+        //echo "<h1>loguin</h1>";
+        return view("auth.profile");
+    }
 
     //Dashboard
     public function dashboard(){
@@ -31,13 +36,6 @@ class AuthController extends Controller
     }
 
     
-
-
-    //Prodile
-    public function profile(){
-        // After Login
-        echo "<h1> profile</h1>";
-    }
 
     public function accses(Request $request) {
         $user = User::where('email', $request->user)->first();

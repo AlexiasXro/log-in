@@ -77,7 +77,7 @@
 
                         <div class="d-flex align-items-center justify-content-center pb-4">
                             <p class="mb-0 me-2">Already have an account?</p>
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Log in</button>
+                            <a href="{{ route('login') }}" class="btn btn-outline-danger">Log in</a>
                         </div>
                     </form>
 
