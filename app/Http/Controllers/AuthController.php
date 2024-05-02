@@ -11,14 +11,14 @@ class AuthController extends Controller
     //Register
     public function register(){
         // GET + Post
-        echo "<h1>registro controlador</h1>";
+        //echo "<h1>registro controlador</h1>";
         return view("auth.register");
     }
 
     //Login
     public function login(){
         // GET + Post
-        echo "<h1>loguin</h1>";
+        //echo "<h1>loguin</h1>";
         return view("auth.login");
     }
     
@@ -26,7 +26,7 @@ class AuthController extends Controller
     //Dashboard
     public function dashboard(){
         // After Login
-        echo "<h1>dashboard</h1>";
+        //echo "<h1>dashboard</h1>";
         return view("auth.dashboard");
     }
 
@@ -50,7 +50,7 @@ class AuthController extends Controller
             // Verificar si la contraseña proporcionada coincide con la contraseña almacenada
             if (Hash::check($request->password, $hashedPassword)) {
                 // La contraseña es correcta, puedes redirigir al usuario a su dashboard
-                return view("welcome");
+                return view("profile");
             } else {
                 // Contraseña incorrecta
                 return "<p>Contraseña incorrecta</p>";
