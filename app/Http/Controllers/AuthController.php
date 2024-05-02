@@ -11,31 +11,33 @@ class AuthController extends Controller
     //Register
     public function register(){
         // GET + Post
-        //echo "<h1>registro controlador</h1>";
+        echo "<h1>registro controlador</h1>";
         return view("auth.register");
     }
 
     //Login
     public function login(){
         // GET + Post
-        //echo "<h1>loguin</h1>";
+        echo "<h1>loguin</h1>";
         return view("auth.login");
     }
     
-    public function profile(){
-        // GET + Post
-        //echo "<h1>loguin</h1>";
-        return view("auth.profile");
-    }
 
     //Dashboard
     public function dashboard(){
         // After Login
-        //echo "<h1>dashboard</h1>";
+        echo "<h1>dashboard</h1>";
         return view("auth.dashboard");
     }
 
     
+
+
+    //Prodile
+    public function profile(){
+        // After Login
+        echo "<h1> profile</h1>";
+    }
 
     public function accses(Request $request) {
         $user = User::where('email', $request->user)->first();
@@ -48,7 +50,7 @@ class AuthController extends Controller
             // Verificar si la contraseña proporcionada coincide con la contraseña almacenada
             if (Hash::check($request->password, $hashedPassword)) {
                 // La contraseña es correcta, puedes redirigir al usuario a su dashboard
-                return view("profile");
+                return view("welcome");
             } else {
                 // Contraseña incorrecta
                 return "<p>Contraseña incorrecta</p>";
