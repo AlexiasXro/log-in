@@ -74,27 +74,27 @@
                     <h4 class="mt-1 mb-5 pb-1">Registrarse</h4>
                   </div>
 
-                  <form action="" method="POST">
+                  <form action="{{ route('register.registation') }}" method="POST">
 
                     @csrf
                     <!---el atributo for está vacío/campo de entrada específico --->
                     <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="email" id="form2Example11" class="form-control" placeholder="Teléfono o correo electrónico" />
+                      <input type="email" name="email" class="form-control" placeholder="Teléfono o correo electrónico" />
                       <label class="form-label" for="form2Example11">Correo electrónico</label>
                     </div>
 
                     <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" id="form2Example22" class="form-control" />
+                      <input type="password" name="password" class="form-control" />
                       <label class="form-label" for="form2Example22">Contraseña</label>
                     </div>
 
                     <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" id="form2Example22" class="form-control" />
-                      <label class="form-label" for="form2Example22">Confirmar contraseña</label>
+                      <input type="password" name="confpsw" class="form-control" />
+                      <label class="form-label">Confirmar contraseña</label>
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <a href="{{route('home_user')}}" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="btnIniciarSesion">Registrar</a>
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Registrar</button>
                     </div>
 
                     <div class="d-flex align-items-center justify-content-center pb-4">
