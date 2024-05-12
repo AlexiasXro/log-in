@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
+  <title>Recuperar contraseña</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -55,6 +55,10 @@
       width: 1em;
       margin-left: 5px;
     }
+    .text-center h6{
+        font-weight: normal;
+    }
+    
   </style>
 </head>
 
@@ -71,64 +75,40 @@
 
                   <div class="text-center">
                     <i class="bi bi-person-workspace" style="font-size: 120px; color:#dd3675; filter: drop-shadow(2px 2px 5px #000000);"></i>
-                    <h4 class="mt-1 mb-5 pb-1">Registrarse</h4>
+                    <h4 class="mt-1 mb-3 pb-1">¿Olvidaste tu contraseña?</h4>
+                    <h6 class="mt-1 mb-4 pb-1" style="color:#5a5a5a;">Ingresa tu correo electrónico y se te enviará un link para cambiar tu contraseña.</h6>
                   </div>
 
-                  <form action="{{ route('register.registation') }}" method="POST">
+                  <form action="{{route('forg_pass')}}" method="POST">
 
                     @csrf
                     <!---el atributo for está vacío/campo de entrada específico --->
+                    
                     <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="email" name="email" class="form-control" placeholder="Teléfono o correo electrónico" />
-                      <label class="form-label" for="form2Example11">Correo electrónico</label>
+                      <input type="mail" id="form2Example22" class="form-control" />
+                      <label class="form-label" for="form2Example22">Correo electrónico</label>
                     </div>
 
-                    <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" name="password" class="form-control" />
-                      <label class="form-label" for="form2Example22">Contraseña</label>
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="btnIniciarSesion">Enviar link</button>
+
+                    
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">¿No tenes una cuenta?</p>
+                      <a href="{{ route('register') }}" class="btn btn-outline-danger">Crea una</a>
+
                     </div>
 
-                    <div data-mdb-input-init class="form-outline mb-4">
-                      <input type="password" name="confpsw" class="form-control" />
-                      <label class="form-label">Confirmar contraseña</label>
-                    </div>
-
-                        <div class="text-center pt-1 mb-5 pb-1">
-                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" >Register</button>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                            <p class="mb-0 me-2">¿Ya tenes una cuenta?</p>
-                            <a href="{{ route('login') }}" class="btn btn-outline-danger">Inicia sesión</a>
-                        </div>
-                    </form>
+                  </form>
 
                 </div>
               </div>
               <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
 
-                  <h4 class="mb-4">Antes de registrarte, elige una de las siguientes opciones:</h4>
+                  <h4 class="mb-4">Titulo</h4>
                   <p class="small mb-0">
-                    <strong>Si deseas contratar un servicio:</strong> Haz clic en "Contratar Servicio" para explorar y contratar servicios ofrecidos por otros usuarios.
-                    <br><br><strong>Si deseas ofrecer un servicio: </strong>Haz clic en "Ofrecer Servicio" para crear y ofrecer tus propios servicios a otros usuarios.
-                    <br><br><strong>Si eres una empresa:</strong> Haz clic en "Usuario Empresarial" para acceder a funciones adicionales diseñadas para empresas.
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, eligendi? Architecto adipisci dolores id veritatis commodi. Fuga, quos quisquam voluptas, commodi officiis qui dolore doloribus, voluptates ullam veniam aperiam perspiciatis.
                   </p>
-                  <hr>
-                  <div class="d-flex justify-content-around align-items-center mb-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario1" value="modo1" required />
-                      <label class="form-check-label" for="modoUsuario1">Contrata Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario2" value="modo2" />
-                      <label class="form-check-label" for="modoUsuario2">Ofrecer Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario3" value="modo3" />
-                      <label class="form-check-label" for="modoUsuario3">Usuario Empresaral</label>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

@@ -29,12 +29,20 @@ class AuthController extends Controller
     }
 
      //forgotten password
-     public function forg_pass(){
+    public function forg_pass(){
         // GET + Post
-        return view("auth.forgotten_pass");
+        return view("auth.forg_pass");
+    }
+
+    public function home(){
+        // GET + Post
+        return view("home");
     }
     
-
+    public function home_user(){
+        // GET + Post
+        return view("auth.home_user");
+    }
 
     //Prodile
     public function profile(){
@@ -53,7 +61,7 @@ class AuthController extends Controller
             // Verificar si la contraseña proporcionada coincide con la contraseña almacenada
             if (Hash::check($request->password, $hashedPassword)) {
                 // La contraseña es correcta, puedes redirigir al usuario a su dashboard
-                return view("home");
+                return view("auth.home_user");
             } else {
                 // Contraseña incorrecta
                 return "<p>Contraseña incorrecta</p>";
