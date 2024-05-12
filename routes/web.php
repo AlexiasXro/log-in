@@ -38,3 +38,6 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('forg_pass', [AuthController::class, 'forg_pass'])->name('forg_pass');
 Route::post('forg_pass', [AuthController::class, 'forg_pass'])->name('forg_pass');
+
+Route::get('home_user', [AuthController::class, 'home_user'])->name('home_user');
+Route::post('home_user', [AuthController::class, 'home_user'])->name('home_user');

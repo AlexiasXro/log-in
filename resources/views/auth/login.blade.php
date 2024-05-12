@@ -90,7 +90,7 @@
 
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="btnIniciarSesion">Iniciar sesión</button>
+                      <a href="{{route('home_user')}}" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" id="btnIniciarSesion">Iniciar sesión</a>
                       <a class="text-muted" href="{{ route('forg_pass') }}">¿Olvidaste tu contraseña?</a>
                     </div>
                     
@@ -108,26 +108,11 @@
               <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
 
-                  <h4 class="mb-4">Antes de iniciar sesión, elige una de las siguientes opciones:</h4>
+                  <h4 class="mb-4">Somos más que una compañía</h4>
                   <p class="small mb-0">
-                    <strong>Si deseas contratar un servicio:</strong> Haz clic en "Contratar Servicio" para explorar y contratar servicios ofrecidos por otros usuarios.
-                    <br><br><strong>Si deseas ofrecer un servicio: </strong>Haz clic en "Ofrecer Servicio" para crear y ofrecer tus propios servicios a otros usuarios.
-                    <br><br><strong>Si eres una empresa:</strong> Haz clic en "Usuario Empresarial" para acceder a funciones adicionales diseñadas para empresas.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus tempore perferendis adipisci atque laudantium, beatae minus molestiae modi expedita nam consequatur obcaecati vero sequi ab? Nemo labore enim laudantium voluptatem.
                   </p>
-                  <hr>
-                  <div class="d-flex justify-content-around align-items-center mb-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario1" value="modo1" required />
-                      <label class="form-check-label" for="modoUsuario1">Contrata Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario2" value="modo2" />
-                      <label class="form-check-label" for="modoUsuario2">Ofrecer Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario3" value="modo3" />
-                      <label class="form-check-label" for="modoUsuario3">Usuario Empresaral</label>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
