@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -57,18 +58,22 @@ class AuthController extends Controller
         if ($user) {
             // Obtener la contraseña almacenada del usuario
             $hashedPassword = $user->password;
-    
+
             // Verificar si la contraseña proporcionada coincide con la contraseña almacenada
             if (Hash::check($request->password, $hashedPassword)) {
                 // La contraseña es correcta, puedes redirigir al usuario a su dashboard
                 return view("auth.home_user");
             } else {
-                // Contraseña incorrecta
-                return "<p>Contraseña incorrecta</p>";
+                // Contraseña incorrecta, redirige con un mensaje de error
+                return redirect()->back()->withErrors([
+                    'password' => 'Usuario o contraseña no encontrado.',
+                ]);
             }
         } else {
-            // Usuario no encontrado
-            return "<p>Usuario no encontrado</p>";
+            // Usuario no encontrado, redirige con un mensaje de error
+            return redirect()->back()->withErrors([
+                'user' => 'Usuario o contraseña no encontrado.',
+            ]);
         }
         
         
@@ -79,6 +84,7 @@ class AuthController extends Controller
         
     }
     public function registation(Request $request){
+        
         
         
         if($request->password == $request->confpsw){

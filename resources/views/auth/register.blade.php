@@ -115,21 +115,6 @@
                     <br><br><strong>Si eres una empresa:</strong> Haz clic en "Usuario Empresarial" para acceder a funciones adicionales diseñadas para empresas.
                   </p>
                   <hr>
-                  <div class="d-flex justify-content-around align-items-center mb-4">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario1" value="modo1" required />
-                      <label class="form-check-label" for="modoUsuario1">Contrata Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario2" value="modo2" />
-                      <label class="form-check-label" for="modoUsuario2">Ofrecer Servicio</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="modoUsuario" id="modoUsuario3" value="modo3" />
-                      <label class="form-check-label" for="modoUsuario3">Usuario Empresaral</label>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
