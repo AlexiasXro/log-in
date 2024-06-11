@@ -89,7 +89,7 @@ class AuthController extends Controller
         
         if($request->password == $request->confpsw){
             $u = New User;
-            $u->email = $request->user;
+            $u->email = $request->email;
             $u->password = $request->password;
             $u->is_admin = false;
             $u->save();
